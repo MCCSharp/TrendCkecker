@@ -14,22 +14,23 @@ register();
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+
+  public progress =0.2
   public trendName?: string;
+  public a = true;
+  public showTrendArr: Trend[] = []
+
   selectedValue: string | undefined;
   trendNameArr: string[] = ['Pizza', 'Döner', 'Spagetti', 'Salat'];
   trendArr: Trend[] = [];
   id = 0;
-  trendArrlenght = 0;
-  progress = 0;
-  public a = true;
 
   constructor() {}
 
   ngOnInit(): void {
     this.trendName = this.trendNameArr[this.id];
     console.log('hallo');
-    this.trendArrlenght = this.trendNameArr.length;
-    this.progress = this.id;
+    this.progress;
   }
 
   onIonChange(trendName: string, ev: Event): void {
@@ -54,13 +55,19 @@ export class HomePage implements OnInit {
         value: parseInt(this.selectedValue!),
       });
       this.id++;
+      this.progress +=0.2
       if (this.id == this.trendNameArr.length) {
         this.a = false;
-        console.log('3 - id:',this.id, 'len:',this.trendNameArr.length,'a:', this.a);
+        this.trendArr=this.trendArr.sort(function(a, b) {return b.value - a.value;})
+        console.log('3 - id:',this.id, 'len:',this.trendArr,'a:', this.a);
       } else {
         this.trendName = this.trendNameArr[this.id];
       }
     }
-    console.log(this.trendArrlenght, this.progress);
+  }
+  rankEvent(){
+    this.showTrendArr = this.trendArr.sort(function(a, b) {
+  return a.value - b.value;})
+      console.log(this.showTrendArr)
   }
 }

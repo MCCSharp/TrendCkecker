@@ -1,3 +1,5 @@
+
+
 #container {
   text-align: center;
 
@@ -27,8 +29,8 @@
 }
 
 ion-range {
-  --bar-background: #bcbcba;
-  --bar-background-active: #f5cf44e6;
+  --bar-background: #D7D7D7;
+  --bar-background-active: #DDA932;
   --bar-height: 8px;
   --bar-border-radius: 8px;
   --knob-background: #fff;
@@ -37,3 +39,73 @@ ion-range {
   --pin-background: #fff;
   --pin-color: #fff;
 }
+ion-progress-bar {
+  --background: #A2C5C4;;
+  --progress-background: #02423F;
+  width: 100%;
+  height: 0.6rem;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 10em;
+}
+
+.myRange{
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0px
+}
+
+.myProgressbarDiv{
+  padding: 1em;
+  --min-height: 80px;
+  --padding-top: 20px;
+}
+
+.myRank{
+  padding: 1em;
+}
+div> h1 {
+  text-align: left;
+  font-weight: bold;
+  padding: 0.2em;
+}
+
+ion-card{
+  border-radius: 1em;
+  box-shadow: none;
+}
+
+ion-card-content{
+  color: #060101;
+  background-color: #DFEEEC;
+  text-align: left;
+}
+
+ion-card-content > span{
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.label-left{
+  padding-left: 0.5em;
+  float: left;
+}
+.label-right{
+  padding-right: 0.5em;
+  float: right;
+}
+ion-grid{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+ ion-col{
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+}
+
+
+
+
