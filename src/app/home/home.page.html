@@ -21,7 +21,7 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <div class="myRange">
+            <div class="myPadding">
               <ion-range (ionChange)="onIonChange(trendName!, $event)" [min]="0" [max]="10" [value]="5"></ion-range>
             </div>
           </ion-col>
@@ -41,7 +41,7 @@
 
     </div>
 
-    <div *ngIf="!a" class="myRange">
+    <div *ngIf="!a" class="myPadding">
       <h1>Your Ranking</h1>
       <ion-card>
         <ion-card-content>
