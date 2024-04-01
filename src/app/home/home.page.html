@@ -9,6 +9,7 @@
 <ion-content>
   <div id="container">
     <div *ngIf="a">
+
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -16,11 +17,11 @@
           </ion-col>
         </ion-row>
       </ion-grid>
+
       <ion-grid>
         <ion-row>
           <ion-col>
             <div class="myRange">
-
               <ion-range (ionChange)="onIonChange(trendName!, $event)" [min]="0" [max]="10" [value]="5"></ion-range>
             </div>
           </ion-col>
@@ -37,7 +38,9 @@
           </ion-col>
         </ion-row>
       </ion-grid>
+
     </div>
+
     <div *ngIf="!a" class="myRange">
       <h1>Your Ranking</h1>
       <ion-card>
@@ -49,5 +52,6 @@
         </ion-card-content>
       </ion-card>
     </div>
+
   </div>
 </ion-content>
